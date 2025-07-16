@@ -1,0 +1,18 @@
+MOVEI 7 rb
+loop:
+IPORT ra
+SUB ra rb rc
+BRAZ correct
+BRAO low
+high:
+MOVEI 2 rd
+OPORT rd
+BRA loop
+low:
+MOVEI 1 rd
+OPORT rd
+BRA loop
+correct:
+MOVEI 0 rd
+OPORT rd
+HALT

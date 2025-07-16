@@ -1,0 +1,15 @@
+movei 0 RA
+movei 1 RB
+oport RA
+oport RB
+movei 8 RC
+loop:
+add RA RB RD
+move RB RA
+move RD RB
+oport RD
+movei 1 RE
+sub RC RE RC
+braz break
+bra loop
+break:

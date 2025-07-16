@@ -1,0 +1,13 @@
+movei 0 RA 
+movei 10 RB 
+movei 1 RC 
+call sum 
+halt 
+sum:
+add RA RB RA 
+oport RA 
+sub RB RC RB 
+braz end
+CALL sum
+end:
+RETURN

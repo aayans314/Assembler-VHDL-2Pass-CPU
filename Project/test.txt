@@ -1,0 +1,8 @@
+MOVEI 4 RA
+start:
+MOVEI 1 RE
+SUB RA RE RA
+BRAZ after
+BRA start
+after:
+MOVEI 1 RD
